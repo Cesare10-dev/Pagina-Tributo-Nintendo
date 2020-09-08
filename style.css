@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 80px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  animation: spostamentod 1s ease forwards;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+  padding: 28px 16px;
+  border-radius: 10%;
+  background-color: rgb(165, 165, 165);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: 19px 8px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+a:active {
+  background-color: rgb(165, 165, 165);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  height: 260px;
+  max-width: 100%;
+  margin: auto;
+  border-bottom: 4px solid red;
+}
+
+header > div {
+  flex: 1;
+  margin: 0 40px;
+}
+
+.sinistro {
+  margin-top: 70px;
+}
+
+img {
+  width: 100%;
+}
+
+.centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 540px;
+  margin-top: 60px;
+  border-bottom: 4px solid red;
+  perspective: 1000px;
+}
+
+.centros {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.centros:hover {
+  transform: rotateX(180deg);
+}
+
+.centros > img {
+  animation: spostamentos 1s ease forwards;
+}
+
+.centro > .centrod {
+  animation: spostamentod 1s ease forwards;
+}
+
+.centro > div {
+  flex: 1;
+  margin: 0 40px;
+}
+
+.joystick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 4px solid red;
+}
+
+.joystick > div {
+  flex: 1;
+  margin: 0 40px;
+}
+
+@keyframes spostamentos {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes spostamentod {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 910px) {
+  header {
+    flex-direction: column;
+  }
+  .sinistro {
+    margin-top: 0;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    display: none;
+  }
+  .centro {
+    flex-direction: column;
+  }
+  .centros img {
+    width: 550px;
+  }
+}
